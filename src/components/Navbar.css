@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  padding: 18px 0;
+  background-color: #111;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link.active {
+  color: #ff4b57; 
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav links initially */
+  .nav-menu {
+    position: absolute;
+    top: 68px;
+    right: 0;
+    width: 200px;
+    background-color: #111;
+    flex-direction: column;
+    padding: 20px;
+    gap: 1.5rem;
+    display: none;
+  }
+
+  /* When open */
+  .nav-menu.open {
+    display: flex;
+  }
+}
